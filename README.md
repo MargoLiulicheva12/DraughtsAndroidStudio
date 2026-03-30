@@ -25,13 +25,6 @@
   - Показ последнего хода в шахматной нотации
   - Информация о текущем ходе с предупреждением об обязательном взятии
 
-## Скриншоты
-Главный экран: 
-<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/c35af796-983f-4c70-a2d1-8609725d7fd7" />
-<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/27865930-4dcc-4e24-a6c8-9a9921138871" />
-Экран игры:
-<img width="591" height="1280" alt="image" src="https://github.com/user-attachments/assets/395bceb9-d5a8-484c-897d-cd38a06f3d2c" />
-
 ## Технологии
 - **Язык:** Kotlin
 - **Минимальная версия SDK:** 21 (Android 5.0)
