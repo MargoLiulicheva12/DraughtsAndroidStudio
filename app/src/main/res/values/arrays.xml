@@ -5,8 +5,4 @@
         <item>Средний</item>
         <item>Сложный</item>
     </string-array>
-    <string-array name="game_variants">
-        <item>Классические</item>
-        <item>Поддавки</item>
-    </string-array>
 </resources>
