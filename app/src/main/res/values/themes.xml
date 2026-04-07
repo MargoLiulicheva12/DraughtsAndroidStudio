@@ -1,0 +1,24 @@
+<resources>
+    <!-- Базовое приложение: MaterialComponents с кастомными цветами -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- Тема для MainActivity (можно переопределить, если нужно) -->
+    <style name="MainActivityTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+    </style>
+
+    <!-- Стиль для Toolbar -->
+    <style name="ToolbarStyle" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+</resources>
