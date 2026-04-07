@@ -211,12 +211,9 @@ class Board(private val cells: Array<Array<Piece>> = Array(8) { Array(8) { Piece
     }
 
     // Возвращает обычные ходы (без взятия) для фигуры
-    // Файл Board.kt
-
     fun getNormalMovesFrom(r: Int, c: Int, p: Piece): List<Move> {
         val moves = mutableListOf<Move>()
 
-        // ДОБАВИТЬ СКОБКИ ТУТ: p.isKing -> p.isKing()
         val directions = if (p.isKing()) {
             arrayOf(Pair(-1, -1), Pair(-1, 1), Pair(1, -1), Pair(1, 1))
         } else {
@@ -228,7 +225,6 @@ class Board(private val cells: Array<Array<Piece>> = Array(8) { Array(8) { Piece
             var nr = r + d.first
             var nc = c + d.second
 
-            // И ДОБАВИТЬ СКОБКИ ТУТ: p.isKing -> p.isKing()
             if (p.isKing()) {
                 while (nr in 0..7 && nc in 0..7 && cells[nr][nc] == Piece.EMPTY) {
                     moves.add(Move(r, c, nr, nc))

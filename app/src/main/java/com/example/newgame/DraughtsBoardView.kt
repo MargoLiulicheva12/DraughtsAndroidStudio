@@ -161,7 +161,7 @@ class DraughtsBoardView @JvmOverloads constructor(context: Context, attrs: Attri
         if (isFlipped) { r = 7 - r; c = 7 - c }
         if (r !in 0..7 || c !in 0..7) return true
 
-        // 1. Обработка обязательного продолжения серии ударов (если уже начали бить)
+        // Обработка обязательного продолжения серии ударов (если уже начали бить)
         if (mandatoryPiece != null) {
             val (mR, mC) = mandatoryPiece!!
             val captures = board.getCapturesFrom(mR, mC, board.getPiece(mR, mC))
@@ -176,7 +176,7 @@ class DraughtsBoardView @JvmOverloads constructor(context: Context, attrs: Attri
             return true
         }
 
-        // 2. Если фигура уже выбрана
+        // Если фигура уже выбрана
         if (selectedRow != null && selectedCol != null) {
             val selR = selectedRow!!
             val selC = selectedCol!!
@@ -193,7 +193,6 @@ class DraughtsBoardView @JvmOverloads constructor(context: Context, attrs: Attri
                 invalidate()
                 return true
             } else {
-                // ПРОВЕРКА ДЛЯ ТОСТА: если ход не найден в легальных, проверяем, есть ли обязательный бой
                 if (board.hasMandatoryCaptures(currentPlayer)) {
                     // Проверяем, был ли этот ход «обычным» (без взятия)
                     val potentialNormalMoves = board.getNormalMovesFrom(selR, selC, piece)
@@ -207,7 +206,7 @@ class DraughtsBoardView @JvmOverloads constructor(context: Context, attrs: Attri
             }
         }
 
-        // 3. Выбор фигуры (обычный клик)
+        // Выбор фигуры (обычный клик)
         val clickedPiece = board.getPiece(r, c)
         if (clickedPiece != Piece.EMPTY && clickedPiece.isWhite() == currentPlayer.isWhite()) {
             selectedRow = r
