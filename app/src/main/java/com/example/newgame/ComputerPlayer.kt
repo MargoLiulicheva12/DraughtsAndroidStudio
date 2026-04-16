@@ -3,7 +3,7 @@ package com.example.newgame
 class ComputerPlayer(val color: Piece, val diff: Difficulty) {
 
     fun getMove(board: Board): Move? {
-        // Получаем все возможные ходы для цвета компьютера
+        // Получаем все возможные ходы для цвета  компьютера
         val moves = board.getAllMoves(color)
         if (moves.isEmpty()) return null
 
@@ -12,7 +12,7 @@ class ComputerPlayer(val color: Piece, val diff: Difficulty) {
             // ЛЕГКО: случайный ход
             Difficulty.EASY -> moves.random()
 
-            // СРЕДНЕ: выбираем ход с максимальной оценкой позиции
+            // СРЕДНЕ: выбираем ход с максимальной оценкой  позиции
             Difficulty.MEDIUM -> moves.maxByOrNull { m ->
                 val b = board.copy()
                 b.makeMove(m)
