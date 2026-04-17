@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.newgame"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.newgame"
-        minSdk = 24
-        targetSdk = 36
+        minSdk = 26
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 

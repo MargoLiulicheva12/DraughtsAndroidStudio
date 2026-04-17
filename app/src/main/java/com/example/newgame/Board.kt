@@ -70,7 +70,7 @@ class Board(private val cells: Array<Array<Piece>> = Array(8) { Array(8) { Piece
 
         // Обновляем счетчик ходов без взятия
         if (wasCapture || wasPromotion) {
-            movesWithoutCapture = 0 // Было взятие или превращение - сбрасываем
+            movesWithoutCapture = 0 // Было взятие или превращение - тогда сбрасываем
         } else {
             movesWithoutCapture++ // Обычный ход - увеличиваем
         }
@@ -118,7 +118,7 @@ class Board(private val cells: Array<Array<Piece>> = Array(8) { Array(8) { Piece
         var whiteKings = 0      // Белых дамок
         var blackKings = 0      // Черных дамок
 
-        // Подсчитываем фигуры
+        // Подсчитываем кол-во фигур
         for (r in 0..7) {
             for (c in 0..7) {
                 val p = cells[r][c]
